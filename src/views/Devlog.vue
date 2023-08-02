@@ -10,7 +10,7 @@ function addArticel() {
   devlog.addArticels(title, discription);
 }
 
-function Test(id) {
+function showText(id) {
   const cardText = document.getElementById("article-" + id);
 
   if (cardText.classList.value == "") {
@@ -37,7 +37,7 @@ function Test(id) {
     <div v-for="articel in devlog.articels" v-bind:key="articel.id">
       <div
         class="devlog-card border border-3 border-black mb-3"
-        @click="Test(articel.id)"
+        @click="showText(articel.id)"
       >
         <div class="row">
           <div class="col-12">
