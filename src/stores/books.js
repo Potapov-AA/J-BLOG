@@ -54,14 +54,14 @@ const defaultValue = [
   },
   {
     id: 0,
-    title: "История с кладбищем",
+    title: "Истори123я с кладбищем",
     author: "Н. Гейман",
     status: "Прочтена",
     isFavorite: false,
   },
   {
     id: 1,
-    title: "Никогде",
+    title: "Никог123де",
     author: "Н. Гейман",
     status: "Прочтена",
     isFavorite: true,
@@ -69,27 +69,27 @@ const defaultValue = [
   {
     id: 2,
     title: "Американские Боги",
-    author: "Н. Гейман",
+    author: "Н. Г123213ейман",
     status: "Прочтена",
     isFavorite: false,
   },
   {
     id: 3,
     title: "Океан в конце дороги",
-    author: "Н. Гейман",
+    author: "Н. Г32332ейман",
     status: "Прочтена",
     isFavorite: true,
   },
   {
     id: 4,
     title: "Звёздная пыль",
-    author: "Н. Гейман",
+    author: "Н. Г33333ейман",
     status: "Прочтена",
     isFavorite: true,
   },
   {
     id: 5,
-    title: "Сыновья Ананси",
+    title: "Сыновья 333Ананси",
     author: "Н. Гейман",
     status: "Читаю",
     isFavorite: false
@@ -117,7 +117,7 @@ const defaultValue = [
   },
   {
     id: 2,
-    title: "Американские Боги",
+    title: "Америка123233нские Боги",
     author: "Н. Гейман",
     status: "Прочтена",
     isFavorite: false,
@@ -150,6 +150,77 @@ const defaultValue = [
     status: "Запланирована",
     isFavorite: false
   },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  {
+    id: 2,
+    title: "Америка123233нские Боги",
+    author: "Н. Гейман",
+    status: "Прочтена",
+    isFavorite: false,
+  },
+  
 ];
 
 const getValue = () => {
