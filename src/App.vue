@@ -4,7 +4,7 @@
   <div>
     <header class="sticky-top bg-white">
       <h1 class="text-center">миниБЛОГ</h1>
-
+      
       <div class="d-flex flex-row justify-content-center mt-3">
         <div class="px-4">
           <router-link class="btn btn-dark" to="/">
