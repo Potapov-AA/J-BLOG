@@ -1,6 +1,7 @@
 <script setup>
 import { useDevlogStore } from "@/stores/devlog";
-
+import ArticleComponent from '@/components/ArticleComponent.vue'
+    
 const devlog = useDevlogStore();
 
 function addArticel() {
@@ -34,25 +35,8 @@ function showText(id) {
       </button>
     </div>
 
-    <div v-for="articel in devlog.articels" v-bind:key="articel.id">
-      <div
-        class="devlog-card border border-3 border-black mb-3"
-        @click="showText(articel.id)"
-      >
-        <div class="row">
-          <div class="col-12">
-            <b>&#60;dev#{{ articel.id + 1 }}&#62; </b>
-            <strong class="text-uppercase">
-              {{ articel.title }}
-            </strong>
-          </div>
-          <hr class="border border-dark border-1 opacity-100 mt-2" />
-        </div>
-
-        <p v-bind:id="'article-' + articel.id" class="text-truncate">
-          {{ articel.description }}
-        </p>
-      </div>
+    <div v-for="articel in devlog.articels.length" v-bind:key="articel.id">
+      <ArticleComponent :id="articel - 1"/>
     </div>
 
     <!-- Модальное окно -->
