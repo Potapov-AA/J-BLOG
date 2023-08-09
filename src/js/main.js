@@ -11,10 +11,6 @@ import * as directives from "vuetify/directives";
 
 import "@mdi/font/css/materialdesignicons.css"
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap";
-
 import "@/scss/style.scss";
 
 const pinia = createPinia(App);
