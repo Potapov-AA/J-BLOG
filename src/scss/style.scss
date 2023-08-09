@@ -10,8 +10,10 @@ $width_header_link: 100px;
 
 .content {
   height: auto !important;
+  width: 100%;
   height: 100%;
   margin: 0 auto 80px;
+  
 }
 
 .center-on-page {
@@ -37,6 +39,8 @@ $width_header_link: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .books-library {
