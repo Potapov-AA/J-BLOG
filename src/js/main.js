@@ -11,8 +11,6 @@ import * as directives from "vuetify/directives";
 
 import "@mdi/font/css/materialdesignicons.css"
 
-import "bootstrap-icons/font/bootstrap-icons.css";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap";
@@ -27,4 +25,7 @@ const vuetify = createVuetify({
   iconfont: 'mdi'
 });
 
+
 createApp(App).use(vuetify).use(router).use(pinia).mount("#app");
+
+
