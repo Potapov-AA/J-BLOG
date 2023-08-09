@@ -4,6 +4,16 @@ const STORE_NAME = "devlog";
 
 const defaultValue = [
   {
+    id: 8,
+    title: "Обновил Devlog",
+    description: "Теперь Devlog практически не использует bootstrap, оставил только класс для описания text-truncate"
+  },
+  {
+    id: 7,
+    title: "Обновлен подвал",
+    description: "Обновил подвал сайта, полностью убрал bootstrap классы и перевел его на vuetify. Также перенес подвал в отдельный компонент"
+  },
+  {
     id: 6,
     title: "Долой Bootstrap, Welcome Vuetify",
     description:
