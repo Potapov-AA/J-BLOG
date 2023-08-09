@@ -10,16 +10,6 @@ function addArticel() {
 
   devlog.addArticels(title, discription);
 }
-
-function showText(id) {
-  const cardText = document.getElementById("article-" + id);
-
-  if (cardText.classList.value == "") {
-    cardText.classList.add("text-truncate");
-  } else {
-    cardText.classList.remove("text-truncate");
-  }
-}
 </script>
 
 <template>
