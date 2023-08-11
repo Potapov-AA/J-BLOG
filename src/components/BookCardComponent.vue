@@ -6,7 +6,7 @@ const books = useBooksStore();
 const props = defineProps({
   id: {
     type: Number,
-    default: 16,
+    default: 0,
   },
 });
 </script>
