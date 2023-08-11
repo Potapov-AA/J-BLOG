@@ -63,6 +63,7 @@ const props = defineProps({
             :key="i"
             size="x-large"
             color="black"
+            class="pt-1"
           >
             mdi-star-circle
           </v-icon>
@@ -110,6 +111,7 @@ const props = defineProps({
             :key="i"
             size="x-large"
             color="black"
+            class="pt-1"
           >
             mdi-star-circle
           </v-icon>
