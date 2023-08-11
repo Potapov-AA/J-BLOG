@@ -1,11 +1,19 @@
 $width_header_link: 100px;
 
-.devlog-content {
-  // min-height: calc(100vh - 300px);
-  min-height: 100%;
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}
+
+.content {
   height: auto !important;
+  width: 100%;
   height: 100%;
-  margin: 0 auto 110px;
+  margin: 0 auto 80px;
+  
 }
 
 .center-on-page {
@@ -31,6 +39,8 @@ $width_header_link: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .books-library {

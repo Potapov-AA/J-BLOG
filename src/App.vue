@@ -1,26 +1,18 @@
 <script setup>
-import HeaderComponent from '@/components/HeaderComponent.vue'
-      
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 </script>
 
 <template>
   <div>
     <v-app>
-      <v-content>
-        <v-container>
-          <HeaderComponent></HeaderComponent>
+      <HeaderComponent></HeaderComponent>
 
-            <router-view></router-view>
+      <v-main class="mt-4 content">
+        <router-view></router-view>
+      </v-main>
 
-          <footer class="fixed-bottom bg-white">
-            <hr class="border border-dark border-2 opacity-100" />
-            <p class="text-center">miniblog@mail.ru <br /></p>
-            <p class="text-center text-body-secondary text-uppercase">
-              © copyright 2023
-            </p>
-          </footer>
-        </v-container>
-      </v-content>
+      <FooterComponent></FooterComponent>
     </v-app>
   </div>
 </template>

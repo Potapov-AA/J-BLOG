@@ -1,66 +1,66 @@
 <script setup>
 import { useBooksStore } from "@/stores/books";
+import BookCardComponent from "@/components/BookCardComponent.vue";
 
 const books = useBooksStore();
+
+function getPageCount() {
+  if (books.books.length % 5 > 0) {
+    return Math.floor(books.books.length / 5 + 1);
+  } else {
+    return Math.floor(books.books.length / 5);
+  }
+}
+
+function getCountBooksOnPage(page) {
+  if (page == getPageCount()) {
+    if (books.books.length % 5 != 0) {
+      return books.books.length % 5;
+    }
+  }
+  return -1;
+}
 </script>
 
 <template>
-  <div class="books-content">
-    <div>ВЛЕВО</div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#caruselLibrary"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidenn">Предыдущий</span>
-    </button>
-
-    <div
-      id="caruselLibrary"
-      class="carousel carousel-dark slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div v-for="i in Math.floor(books.books.length / 12)" v-bind:key="i">
-          <div :class="{ active: i == 1 }" class="carousel-item">
-            <div class="books-library" v-for="j in 6" :key="j">
-              <div class="card book-card">
-                <h5 class="card-title text-break">
-                  {{ books.books[j + (i - 1) * 6 - 1].author }}
-                </h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  {{ books.books[j + (i - 1) * 6 - 1].title }}
-                </h6>
-              </div>
-            </div>
-            <br />
-            <div class="books-library" v-for="j in 6" :key="j">
-              <div class="card book-card">
-                <h5 class="card-title text-break">
-                  {{ books.books[j + (i - 1) * 6 - 1 + 6].author }}
-                </h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  {{ books.books[j + (i - 1) * 6 - 1].title }}
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div>
+    <div class="d-flex flex-row justify-center">
+      <div class="mx-4">
+        <v-icon size="x-large" color="black">mdi-book-outline</v-icon>
+        <b class="ml-2">Запланировано</b>
+      </div>
+      <div class="mx-4">
+        <v-icon size="x-large" color="black"
+          >mdi-book-open-page-variant
+        </v-icon>
+        <b class="ml-2">Читаю</b>
+      </div>
+      <div class="mx-4">
+        <v-icon size="x-large" color="black">mdi-book</v-icon>
+        <b class="ml-2">Прочел</b>
       </div>
     </div>
-  
 
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#caruselLibrary"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidenn">Следующий</span>
-  </button>
-  <div>ВПРАВО</div>
-</div>
+    <div v-for="i in getPageCount()" :key="i" cover>
+      <div
+        v-if="getCountBooksOnPage(i) == -1"
+        class="d-flex flex-row justify-center"
+      >
+        <BookCardComponent
+          v-for="j in 5"
+          :key="j"
+          :id="(i - 1) * 5 + j - 1"
+          class="ma-5"
+        ></BookCardComponent>
+      </div>
+      <div v-else class="d-flex flex-row justify-center">
+        <BookCardComponent
+          v-for="j in getCountBooksOnPage(i)"
+          :key="j"
+          :id="(i - 1) * 5 + j - 1"
+          class="ma-5"
+        ></BookCardComponent>
+      </div>
+    </div>
+  </div>
 </template>
